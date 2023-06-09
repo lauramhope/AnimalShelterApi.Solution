@@ -1,6 +1,6 @@
 # Animal Shelter API
 
-#### _API that lists all available cats and dogs at the local animal shelter_
+#### _API that lists all available cats and dogs at a local animal shelter_
 
 ### By **Laura Hope**
 
@@ -76,6 +76,7 @@ DELETE https://localhost:5001/api/animals/{id}
 | Species   | String | not required | Returns animals with a matching species value | https://localhost:5001/api/animals?species={SPECIES} |
 | Breed    | String | not required | Returns animals with a matching breed value  | https://localhost:5001/api/animals?breed={BREED} |
 | Age | Int    | not required | Returns animals with a matching age value | https://localhost:5001/api/animals?age={NUMBER} |
+| Page Number + Page Size | int, int | not required | Returns animals with selected page number & page size | https://localhost:5001/api/animals?pageNumber={PAGENUMBER}&pageSize={PAGESIZE} |
 
 ## Known Bugs
 
