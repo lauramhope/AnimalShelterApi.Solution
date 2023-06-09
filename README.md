@@ -52,6 +52,8 @@ $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
 $ dotnet tool install --global dotnet-ef --version 6.0.0
 $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
 ```
+## Running the API with the Client
+* Follow the instructions in the README.md of [AnimalShelterClient.Solution](https://github.com/lauramhope/AnimalShelterClient.Solution) to set up and run the Animal Shelter Client.
 
 ## Using This API
 * Endpoints for this API are as follows:
