@@ -6,7 +6,7 @@
 
 ## _Description_
 
-_This applications showcases creating an API and calling the API for to implement CRUD functionality_
+_This application showcases creating an API and implementing CRUD functionality within the project. The API allows users to GET, POST, PUT, and DELETE animals from the animal shelter. Application will return responses for each API call to custom endpoints and can be viewed in localhost:5001 within the browser or an API platform such as Postman._
 
 ## _Technologies Used_
 
@@ -21,7 +21,53 @@ _This applications showcases creating an API and calling the API for to implemen
 * _Swagger_
 * _MySQL_
 
-## _Database Setup Instructions_
+## _Setup/Installation Instructions_
+
+1. Clone "AnimalShelterApi.Solution" from the repository to your desktop.
+2. Open your terminal (e.g. Terminal or GitBash) and navigate to this project's directory called "AnimalShelterApi".
+3. Set up the project:
+  * Create two files in the AnimalShelterApi.Solution/AnimalShelterApi directory: 
+  **'.gitignore'**
+  **'appsettings.json'**
+  * Add the following code to the appsettings.json file:
+  ```
+  {
+  "ConnectionStrings": {
+      "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter_api;uid=[USER_ID];pwd=[USER-PW];"
+    }
+  }
+  ```
+  * _Remove the square brackets and replace **USER-ID** and **USER-PW** with your own ID and password_
+4. Set up the database:
+  * Make sure EF Core Migrations is installed on your computer by running ```dotnet tool install --global dotnet-ef --version 6.0.0```
+  * In the production folder of the project (AnimalShelterApi.Solution/AnimalShelterApi) run:
+  ```
+  dotnet ef database update
+  ```
+  * You should see the new schema in your _Navigator > Schemas_ tab of your MySql Workbench on refresh called ```animal_shelter_api```
+5. Add the EF Core packages by typing the following into the command line:
+```
+$ dotnet add package Microsoft.EntityFrameworkCore -v 6.0.0
+$ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
+$ dotnet tool install --global dotnet-ef --version 6.0.0
+$ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
+```
+
+## Using This API
+* Endpoints for this API are as follows:
+```
+GET https://localhost:5001/api/animals/
+GET https://localhost:5001/api/animals/{id}
+POST https://localhost:5001/api/animals/
+PUT https://localhost:5001/api/animals/{id}
+DELETE https://localhost:5001/api/animals/{id}
+
+```
+* In your terminal run ```dotnet watch run``` in the project directory.
+* In your browser open https://localhost:5001/swagger/index.html
+* Use the GUI to navigate the API
+
+* Query Parameters for a GET Request on **Animals**: 
 
 
 
