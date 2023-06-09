@@ -69,7 +69,13 @@ DELETE https://localhost:5001/api/animals/{id}
 
 * Query Parameters for a GET Request on **Animals**: 
 
-
+| Parameter  | Type   | Required     | Description                                      | Sample Url  |
+|----------- |-----   | ---------    | -------------                                    | ----------  |
+| Animals | List | not required | Returns a list of all animals in database | https://localhost:5001/api/animals |
+| Name       | String | not required | Returns animals with a matching name value     | https://localhost:5001/api/animals?name={ANIMALNAME} |
+| Species   | String | not required | Returns animals with a matching species value | https://localhost:5001/api/animals?species={SPECIES} |
+| Breed    | String | not required | Returns animals with a matching breed value  | https://localhost:5001/api/animals?breed={BREED} |
+| Age | Int    | not required | Returns animals with a matching age value | https://localhost:5001/api/animals?age={NUMBER} |
 
 ## Known Bugs
 
