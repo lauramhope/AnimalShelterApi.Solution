@@ -78,11 +78,18 @@ DELETE https://localhost:5001/api/animals/{id}
 | Age | Int    | not required | Returns animals with a matching age value | https://localhost:5001/api/animals?age={NUMBER} |
 | Page Number + Page Size | int, int | not required | Returns animals with selected page number & page size | https://localhost:5001/api/animals?pageNumber={PAGENUMBER}&pageSize={PAGESIZE} |
 
-## Known Bugs
+## _Further Exploration_
 
-No known bugs as of 6/9/23
+* Pagination: the process of separating content into discrete pages
+* _This application has pagination implemented into the AnimalsController.cs file. The user can enter the number of objects seen per page as well as what page number to navigate to when calling on the API. The API responds via entering those integers (page size, page number) into the localhost:5001 URL to take user to the pagination endpoint._
 
-## [MIT](https://opensource.org/license/mit/) License 
+## _Known Bugs_
+
+* No known bugs as of 6/9/23
+
+## _Copyright/License_
+
+## [MIT](https://opensource.org/license/mit/) 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -91,3 +98,5 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 Copyright © 2023 Laura Hope
+
+_Please reach out to me for any questions, comments, or concerns: lauramhope.dpt@gmail.com_
