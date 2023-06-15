@@ -52,10 +52,43 @@ $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 6.0.0
 $ dotnet tool install --global dotnet-ef --version 6.0.0
 $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
 ```
-## Running the API with the Client
+6. Make sure you are still in the production folder (AnimalShelterApi.Solution/AnimalShelterApi) and run ```dotnet watch run``` - this will run the API and open up Swagger UI in your browser.
+
+## _Testing This API_
+
+1. Navigate to the **Swagger UI** tab to test API calls using [this link](https://localhost:5001/swagger/index.html)
+ * To make a GET request, click on the "GET/api/animals" route and click "try it out"
+ * You can leave the default values in the query parameters or fill each of the fields out
+ * Click the "execute" button to see results - status code 200 is success
+ * Optionally, you can try out the different endpoints under the section **Using This API** within the README.
+
+2. Another way to test API calls is by using **Postman**
+  * Make sure the application is running via ```dotnet watch run```
+  * Enter the URL into the search bar: https://localhost:5001/api/animals
+  * To make a GET request on all animals, select GET in the dropdown box to the left of the search bar and select "send" - all entries will pop up in the body listed below
+  * To make a GET request on a specific animal, enter the id, name, species, breed, or age in the URL link:
+      * Id = https://localhost:5001/api/Animals/[ENTER ID HERE]
+      * Name = https://localhost:5001/api/Animals?name=[ENTER NAME HERE]
+      * Species = https://localhost:5001/api/Animals?species=[ENTER SPECIES HERE]
+      * Breed = https://localhost:5001/api/Animals?breed=[ENTER BREED HERE]
+      * Age = https://localhost:5001/api/Animals?age=[ENTER AGE HERE]
+  * To make a POST request for a new animal, enter the URL https://localhost:5001/api/Animals and select POST from the dropdown box to the left
+      * Click on "body" under the search bar and enter a name, species, breed, and age for the new entry (ID will automatically be generated)
+      * Select "send" and see your new animal pop up in the body section at the bottom of the page with a new unique animal ID
+  * To make a PUT request to update existing information on an animal entry, enter the URL https://localhost:5001/api/Animals/[ENTER ID HERE] with the ID of the animal
+      * Select GET from the dropdown and click "send"
+      * Select "body" in the section directly below the search bar, then select "raw" and change the text to "JSON" 
+      * Change the name, species, breed, and/or age of the animal within the body section
+      * Select PUT in the dropdown box to the left of the search bar, and then click "send"
+      * Re-select GET and click "send" again, you will now see your changes
+  * To make a DELETE request to delete an existing animal entry, enter the URL https://localhost:5001/api/Animals/[ENTER ID HERE] with the ID of the animal you are wanting to delete
+    * Select DELETE from the dropdown box to the left of the search bar and click "send"
+    * Entry should now be deleted
+
+## _Running the API with the Client_
 * Follow the instructions in the README.md of [AnimalShelterClient.Solution](https://github.com/lauramhope/AnimalShelterClient.Solution) to set up and run the Animal Shelter Client.
 
-## Using This API
+## _Using This API_
 * Endpoints for this API are as follows:
 ```
 GET https://localhost:5001/api/animals/
@@ -65,9 +98,6 @@ PUT https://localhost:5001/api/animals/{id}
 DELETE https://localhost:5001/api/animals/{id}
 
 ```
-* In your terminal run ```dotnet watch run``` in the project directory.
-* In your browser open https://localhost:5001/swagger/index.html
-* Use the GUI to navigate the API
 
 * Query Parameters for a GET Request on **Animals**: 
 
@@ -87,7 +117,7 @@ DELETE https://localhost:5001/api/animals/{id}
 
 ## _Known Bugs_
 
-* No known bugs as of 6/9/23
+* No known bugs as of 6/15/23
 
 ## _Copyright/License_
 
