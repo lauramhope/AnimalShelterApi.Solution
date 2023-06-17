@@ -56,7 +56,7 @@ $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
 
 ## _Testing This API_
 
-1. Navigate to the **Swagger UI** tab to test API calls using [this link](https://localhost:5001/swagger/index.html)
+1. Navigate to **Swagger UI** to test API calls using [this link](https://localhost:5001/swagger/index.html)
  * To make a GET request, click on the "GET/api/animals" route and click "try it out"
  * You can leave the default values in the query parameters or fill each of the fields out
  * Click the "execute" button to see results - status code 200 is success
@@ -85,7 +85,7 @@ $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 6.0.0
     * Select DELETE from the dropdown box to the left of the search bar and click "send"
     * Entry should now be deleted
 
-## _Running the API with the Client_
+## _Running this API with the Client_
 * Follow the instructions in the README.md of [AnimalShelterClient.Solution](https://github.com/lauramhope/AnimalShelterClient.Solution) to set up and run the Animal Shelter Client.
 
 ## _Using This API_
